@@ -4,16 +4,46 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
+    "dev-server": "webpack-dev-server --display-error-details --content-base dist/ --progress --colors:",
+    "typings-install": "typings install",
+    "postinstall": "npm run typings-install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/asmalik107/angular2-webpack.git"
   },
-  "author": "",
+  "author": "Asim Malik",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/asmalik107/angular2-webpack/issues"
   },
-  "homepage": "https://github.com/asmalik107/angular2-webpack#readme"
+  "homepage": "https://github.com/asmalik107/angular2-webpack#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.8",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "html-webpack-plugin": "^2.9.0",
+    "html-webpack-template": "^4.0.0",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "ts-loader": "^0.8.1",
+    "typescript": "^1.7.5",
+    "typings": "^0.6.8",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.7.3"
+  },
+  "dependencies": {
+    "angular2": "^2.0.0-beta.6",
+    "es6-promise": "^3.1.2",
+    "es6-shim": "^0.33.13",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "zone.js": "0.5.14"
+  }
 }
