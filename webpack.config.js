@@ -30,6 +30,12 @@ var common = {
         chunkFilename: '[chunkhash].js'
     },
     module: {
+        preLoaders: [
+            {
+                test: /\.ts$/,
+                loader: 'tslint-loader'
+            }
+        ],
         loaders: [
             {
                 test: /\.ts$/,
@@ -49,12 +55,16 @@ var common = {
     plugins: [
         new HtmlWebpackPlugin({
             //template: 'node_modules/html-webpack-template/index.ejs',
-            template:'app/index.ejs',
+            template: 'app/index.ejs',
             title: pkg.name,
             appMountId: 'app',
             inject: false
         })
-    ]
+    ],
+    tslint: {
+        emitErrors: true,
+        failOnHint: false
+    }
 };
 
 
@@ -76,7 +86,7 @@ if (TARGET === 'dev-server' || !TARGET) {
     });
 }
 
-if (TARGET === 'build' || TARGET === 'stats') {
+if (TARGET === 'build') {
     module.exports = merge(common, {
         entry: {
             //vendor: Object.keys(pkg.dependencies)
@@ -99,8 +109,8 @@ if (TARGET === 'build' || TARGET === 'stats') {
                 }
             }),
             new webpack.optimize.CommonsChunkPlugin({
-               // names: ['vendor', 'manifest']
-                name:'vendor'
+                // names: ['vendor', 'manifest']
+                name: 'vendor'
             }),
             new ExtractTextPlugin('[name].[chunkhash].css')
         ]

@@ -1,15 +1,19 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "sourceMap": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node"
-  },
-  "exclude": [
-    "node_modules",
-    "typings/main.d.ts",
-    "typings/main"
-  ]
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "moduleResolution": "node"
+    },
+    "exclude": [
+        "node_modules",
+        "typings/main.d.ts",
+        "typings/main"
+    ],
+    "files": [
+        "typings/browser.d.ts",
+        "./app/app.ts"
+    ]
 }
