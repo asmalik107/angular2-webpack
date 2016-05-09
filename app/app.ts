@@ -1,14 +1,12 @@
-import 'zone.js';
+require('zone.js/dist/zone');
 import 'reflect-metadata';
 
-import {Component, View} from 'angular2/core';
-import {bootstrap} from 'angular2/bootstrap';
+import {Component} from '@angular/core';
+import {bootstrap} from '@angular/platform-browser-dynamic';
 
 // Annotation section
 @Component({
-    selector: 'app'
-})
-@View({
+    selector: 'app',
     template: '<h1>Hello {{ name }}</h1>'
 })
 // Component controller

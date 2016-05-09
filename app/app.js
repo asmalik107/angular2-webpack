@@ -7,10 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-require('zone.js');
+require('zone.js/dist/zone');
 require('reflect-metadata');
-var core_1 = require('angular2/core');
-var bootstrap_1 = require('angular2/bootstrap');
+var core_1 = require('@angular/core');
+var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
 // Annotation section
 var MyAppComponent = (function () {
     function MyAppComponent() {
@@ -18,14 +18,12 @@ var MyAppComponent = (function () {
     }
     MyAppComponent = __decorate([
         core_1.Component({
-            selector: 'app'
-        }),
-        core_1.View({
+            selector: 'app',
             template: '<h1>Hello {{ name }}</h1>'
         }), 
         __metadata('design:paramtypes', [])
     ], MyAppComponent);
     return MyAppComponent;
 })();
-bootstrap_1.bootstrap(MyAppComponent);
+platform_browser_dynamic_1.bootstrap(MyAppComponent);
 //# sourceMappingURL=app.js.map
