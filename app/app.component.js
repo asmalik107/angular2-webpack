@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7,23 +8,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-require('zone.js/dist/zone');
-require('reflect-metadata');
 var core_1 = require('@angular/core');
-var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
 // Annotation section
-var MyAppComponent = (function () {
-    function MyAppComponent() {
-        this.name = 'Asim';
+var AppComponent = (function () {
+    function AppComponent() {
+        this.test = 'Test';
     }
-    MyAppComponent = __decorate([
+    AppComponent = __decorate([
         core_1.Component({
             selector: 'app',
-            template: '<h1>Hello {{ name }}</h1>'
+            template: '<h1>Start {{ test }}</h1>'
         }), 
         __metadata('design:paramtypes', [])
-    ], MyAppComponent);
-    return MyAppComponent;
-})();
-platform_browser_dynamic_1.bootstrap(MyAppComponent);
-//# sourceMappingURL=app.js.map
+    ], AppComponent);
+    return AppComponent;
+}());
+exports.AppComponent = AppComponent;
+//# sourceMappingURL=app.component.js.map

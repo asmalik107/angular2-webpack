@@ -17,7 +17,7 @@ var PATHS = {
 
 var common = {
     entry: {
-        app: PATHS.app + '/app.ts',
+        app: PATHS.app + '/main.ts',
         style: PATHS.style
     },
     debug: true,

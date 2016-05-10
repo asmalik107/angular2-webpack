@@ -5,7 +5,9 @@
         "sourceMap": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "removeComments": false,
+        "noImplicitAny": false
     },
     "exclude": [
         "node_modules",
@@ -14,6 +16,6 @@
     ],
     "files": [
         "typings/browser.d.ts",
-        "./app/app.ts"
+        "./app/main.ts"
     ]
 }
