@@ -115,4 +115,13 @@ if (TARGET === 'build') {
             new ExtractTextPlugin('[name].[chunkhash].css')
         ]
     });
+
+}
+
+
+if (TARGET === 'test') {
+    module.exports = merge(common, {
+        entry : {},
+        devtool: 'inline-source-map'
+    });
 }
